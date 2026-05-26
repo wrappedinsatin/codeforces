@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t{}; cin>>t;
+    for (int i{}; i<t;i++) {
+        int n{}; int w{}; cin>>n>>w;
+        cout << n-(n/w) << endl;
+    }
+}
