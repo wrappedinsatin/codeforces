@@ -1,0 +1,38 @@
+// the problem needs kotlin lol. here is a c++ solution
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solution() {
+    int t{}; cin>>t;
+    for (int i{}; i<t; i++) {
+        int k{}; cin>>k;
+        int alice{0}, bob{0};
+        int roundA{0}, roundB{0};
+        for (int rep{0}; rep<2;rep++) {
+            int scorea, scoreb; cin>>scorea>>scoreb;
+            if (scorea > scoreb) {
+                roundA++;
+            }
+            else {
+                roundB++;
+            }
+            alice += scorea; bob += scoreb;
+        }
+        bob += k;
+        if (alice > bob)
+            cout << "NO\n";
+        else if (alice == bob) {
+            if (roundA > roundB) {cout << "NO\n";}
+            else {cout << "YES\n";}
+        }
+        else {
+            cout << "YES\n";
+        }
+    }
+}
+
+int main() {
+    solution();
+    return 0;
+}
